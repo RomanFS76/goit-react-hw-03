@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import css from "./Components/SearchBox/SearchBox.module.css";
 import ContactForm from "./Components/ContactForm/ContactForm";
 import ContactList from "./Components/ContactList/ContactList";
 import SearchBox from "./Components/SearchBox/SearchBox";
@@ -16,7 +17,7 @@ function App() {
     <>
       <h1>Phonebook</h1>
       <ContactForm></ContactForm>
-      <SearchBox></SearchBox>
+      <SearchBox className={css.searchBox}></SearchBox>
       <ContactList dataUser={dataUser}></ContactList>
     </>
   );

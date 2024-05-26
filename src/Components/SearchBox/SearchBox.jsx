@@ -1,8 +1,11 @@
-
+import css from "../SearchBox/SearchBox.module.css";
 
 const SearchBox = () => {
   return (
-    <div>SearchBox</div>
+    <>
+    <label htmlFor="searchValue" className={css.label}>Find contacts by name</label>
+    <input type="text" id="search" name="searchValue" />
+    </>
   )
 }
 
