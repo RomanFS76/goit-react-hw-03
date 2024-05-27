@@ -3,12 +3,12 @@ import clsx from "clsx";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 
-const Contact = ({ dataUser }) => {
+const Contact = ({ dataUser}) => {
   return (
     <ul className={clsx(css.contactList, css.flex)}>
       {dataUser.map((el) => {
         return (
-          <li id={el.id} className={clsx(css.flex,css.contactItem)}>
+          <li key={el.id} className={clsx(css.flex,css.contactItem)}>
             <div className="wrapper">
               <p>
                 <FaUser className={css.icon}/>

@@ -12,13 +12,24 @@ function App() {
     {id: 'id-3', name: 'Eden Clements', number: '645-17-79'},
     {id: 'id-4', name: 'Annie Copeland', number: '227-91-26'},
   ])
-  console.log(dataUser)
+
+  const [filter, setFilter] = useState('');
+
+  const addContact = (newContact) => {
+    setdataUser((prevContact)=>{
+      return [...prevContact,newContact]
+    })
+  };
+
+  const visibleUser = dataUser.filter(el =>  el.name.toLowerCase().includes(filter.toLowerCase()));
+
+
   return (
     <>
       <h1>Phonebook</h1>
-      <ContactForm></ContactForm>
-      <SearchBox className={css.searchBox}></SearchBox>
-      <ContactList dataUser={dataUser}></ContactList>
+      <ContactForm onAdd={addContact}></ContactForm>
+      <SearchBox className={css.searchBox} value={filter} onFilter={setFilter}></SearchBox>
+      <ContactList dataUser={visibleUser} ></ContactList>
     </>
   );
 }
