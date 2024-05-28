@@ -29,7 +29,7 @@ function App() {
       <h1>Phonebook</h1>
       <ContactForm onAdd={addContact}></ContactForm>
       <SearchBox className={css.searchBox} value={filter} onFilter={setFilter}></SearchBox>
-      <ContactList dataUser={visibleUser} ></ContactList>
+      <ContactList showUser={visibleUser} ></ContactList>
     </>
   );
 }

@@ -4,8 +4,8 @@ import { nanoid } from 'nanoid';
 import css from "./ContactForm.module.css";
 
 const initialValues = {
-  username: "",
-  phone: "",
+  name: "",
+  number: "",
 };
 
 const ContactForm = ({onAdd}) => {
@@ -28,11 +28,11 @@ const ContactForm = ({onAdd}) => {
 
         <label htmlFor={nameFieldId} className={css.labelForm}>Name</label>
 
-        <Field type="text" name="username" id={nameFieldId} className={css.fieldForm}/>
+        <Field type="text" name="name" id={nameFieldId} className={css.fieldForm}/>
 
         <label htmlFor={numberFieldId} className={css.labelForm}>Number</label>
 
-        <Field type="number" name="phone" id={numberFieldId} className={css.fieldForm}/>
+        <Field type="number" name="number" id={numberFieldId} className={css.fieldForm}/>
 
         <button type="submit">Submit</button>
 
