@@ -6,7 +6,7 @@ import ContactList from "./Components/ContactList/ContactList";
 import SearchBox from "./Components/SearchBox/SearchBox";
 
 function App() {
-  const [dataUser, setdataUser] = useState([
+  const [dataUser, setDataUser] = useState([
     {id: 'id-1', name: 'Rosie Simpson', number: '459-12-56'},
     {id: 'id-2', name: 'Hermione Kline', number: '443-89-12'},
     {id: 'id-3', name: 'Eden Clements', number: '645-17-79'},
@@ -15,14 +15,14 @@ function App() {
 
   const [filter, setFilter] = useState('');
 
+
+  const visibleUser = dataUser.filter(el => el.name.toLowerCase().includes(filter.toLowerCase()));
+  
   const addContact = (newContact) => {
-    setdataUser((prevContact)=>{
+    setDataUser((prevContact)=>{
       return [...prevContact,newContact]
     })
   };
-
-  const visibleUser = dataUser.filter(el =>  el.name.toLowerCase().includes(filter.toLowerCase()));
-
 
   return (
     <>
@@ -33,5 +33,7 @@ function App() {
     </>
   );
 }
+
+
 
 export default App;

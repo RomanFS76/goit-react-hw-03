@@ -1,7 +1,7 @@
 import { Formik, Form, Field } from 'formik';
 import { useId } from 'react';
-// import { nanoid } from 'nanoid'
-import css from "./ContactForm.module.css"
+import { nanoid } from 'nanoid';
+import css from "./ContactForm.module.css";
 
 const initialValues = {
   username: "",
@@ -14,15 +14,10 @@ const ContactForm = ({onAdd}) => {
 
 
 
-  const handleSubmit = ({values, actions}) => {
-    // onAdd({
-    //   id:nanoid(),
-    //   name:e.target.elements.username.value,
-    //   number:e.target.elements.phone.value,
-    // });
-    console.log(values);
-    console.log(actions);
-
+  const handleSubmit = (values) => {    
+    onAdd({
+      id: nanoid(), ...values      
+    });
   };
 
 
