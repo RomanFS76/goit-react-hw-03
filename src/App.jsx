@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import css from "./Components/SearchBox/SearchBox.module.css";
-import ContactForm from "./Components/ContactForm/ContactForm";
-import ContactList from "./Components/ContactList/ContactList";
-import SearchBox from "./Components/SearchBox/SearchBox";
+import css from "./сomponents/SearchBox/SearchBox.module.css";
+import ContactForm from "./сomponents/ContactForm/ContactForm";
+import ContactList from "./сomponents/ContactList/ContactList";
+import SearchBox from "./сomponents/SearchBox/SearchBox";
 
 
 const usersData = [
